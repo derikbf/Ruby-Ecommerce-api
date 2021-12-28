@@ -1,4 +1,4 @@
-require 'rails_helper'
+require "rails_helper"
 
 describe "Home", type: :request do
   let(:user) { create(:user) }
@@ -8,7 +8,7 @@ describe "Home", type: :request do
     expect(body_json).to eq({ 'message' => 'Uhul!' })
   end
 
-  it "test Home" do
+  it "tests home" do
     get '/admin/v1/home', headers: auth_header(user)
     expect(response).to have_http_status(:ok)
   end
